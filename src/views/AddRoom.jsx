@@ -25,7 +25,7 @@ export default function () {
       navigate("/")
     return alert("ERROR")
     }
-    setHouse([...house, { selectedRoom, roomName, roomColor }])
+    setHouse([...house, { selectedRoom, roomName, roomColor, selectedServices:[] }])
     alert("room created")
     navigate("/")
    }
@@ -39,18 +39,18 @@ export default function () {
 
    
   return (
-    <div style={{display:'flex' ,justifyContent:"center",alignItems:"center", height: '95vh'}}>
-        <div style={{height:"600px",width:"700px",display:'flex', flexDirection:"column",justifyContent:"space-around",alignItems:"center",border: '2px solid lightblue',borderRadius:"10px"}}>
-             <h1>Smart house</h1>
-             <select onChange={(e)=>{setSelectedRoom(e.target.value)}}>
+    <div className='addRoomMain'>
+        <div style={{height:"600px",width:"700px",display:'flex', flexDirection:"column",justifyContent:"space-around",alignItems:"center",border: '10px solid white',borderRadius:"10px"}}>
+             <h1 style={{color:"white",fontSize:"80px"}}>Smart house</h1>
+             <select className='addRoomSelect' onChange={(e)=>{setSelectedRoom(e.target.value)}}>
                 <option value="">choose room</option>
                 <option value="kitchen">kitchen</option>
                 <option value="bathroom">bathroom</option>
                 <option value="living room">living room</option>
             </select>
-            <input onChange={(e)=>{setRoomName(e.target.value)}} style={{width:"300px", height:"30px"}} type="text"placeholder='room name' />
-            <input onChange={(e)=>{setRoomColor(e.target.value)}} style={{width:"300px", height:"30px"}} type="text" placeholder='room color' />
-            <button onClick={createRoom}>createRoom</button>
+            <input className='addRoomInput' onChange={(e)=>{setRoomName(e.target.value)}} style={{width:"300px", height:"30px"}} type="text"placeholder='room name' />
+            <input className='addRoomInput' onChange={(e)=>{setRoomColor(e.target.value)}} style={{width:"300px", height:"30px"}} type="text" placeholder='room color' />
+            <button className='addRoomButton' onClick={createRoom}>createRoom</button>
         </div>
     </div>
   )

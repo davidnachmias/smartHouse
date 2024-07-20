@@ -1,4 +1,4 @@
-:root {
+/* :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -59,3 +59,217 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+ */
+
+ * {
+  margin: 0;
+  padding: 0;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.main {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.content {
+  margin-top: 120px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.link {
+  color: white;
+  display: inline-block;
+  font-size: 80px;
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+  background-color: lightpurple;
+  border-radius: 50%;
+  text-decoration: none;
+}
+
+.addRoomMain {
+  width: 100%;
+  height: 100vh;
+  background-image: url('./assets/addroombg.jpg'); /* נתיב יחסי לתיקיית src */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; /* הוסף כדי לסדר את התוכן בצורה נוחה */
+}
+
+.addRoomInput {
+  width: 400px;
+  height: 50px;
+  background-color: transparent;
+  border: solid white;
+  border-radius: 5px;
+  border-bottom: 10px solid rgb(150, 229, 216);
+  color: white;
+  font-size: 30px;
+  padding: 10px;
+  outline: none;
+  transition: border-bottom 0.3s ease;
+}
+
+.addRoomInput::placeholder {
+  color: white;
+  opacity: 0.7;
+}
+
+.addRoomInput:focus {
+  border-bottom: 5px solid rgba(5, 214, 214, 0.815);
+}
+
+.addRoomSelect {
+  width: 400px;
+  height: 50px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 8px solid rgb(31, 255, 221);
+  color: white;
+  font-size: 20px;
+  padding: 10px;
+  outline: none;
+  appearance: none;
+  border-radius: 5px;
+  transition: border-bottom 0.3s ease;
+}
+
+.addRoomSelect:focus {
+  border-bottom: 8px solid rgb(31, 255, 221);
+}
+
+.addRoomSelect::-ms-expand {
+  display: none;
+}
+
+.addRoomSelect option {
+  background-color: black;
+  color: white;
+}
+
+.addRoomButton {
+  width: 400px;
+  height: 50px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 8px solid rgb(31, 255, 221);
+  color: white;
+  font-size: 20px;
+  padding: 10px;
+  outline: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-bottom 0.3s ease;
+}
+
+.addRoomButton:hover {
+  background-color: rgba(31, 255, 221, 0.1);
+}
+
+.addRoomButton:focus {
+  border-bottom: 8px solid rgb(31, 255, 221);
+}
+
+.insideRoomContainer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  display: flex;
+  flex-direction: column; /* הוסף כדי לסדר את התוכן בצורה נוחה */
+  align-items: center;
+  justify-content: center;
+  color: white;
+  padding: 20px;
+  box-sizing: border-box; /* הוסף כדי לכלול את ה-padding בתוך הגובה והרוחב */
+}
+
+.service-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* רווח בין שירותים */
+  margin-top: 20px;
+}
+
+.select-services {
+  width: 400px;
+  height: 50px;
+  background-color: transparent; /* רקע שקוף */
+  border: none; /* ללא גבולות */
+  border-bottom: 8px solid white; /* קו תחתון בצבע תכלת */
+  color: white; /* צבע הטקסט של ה-<select> */
+  font-size: 20px; /* גודל הפונט */
+  padding: 10px; /* ריווח פנימי */
+  border-radius: 5px; /* פינות מעוגלות */
+  transition: border-bottom 0.3s ease; /* אנימציה לשינוי צבע הקו התחתון */
+  appearance: none; /* מסיר את העיצוב הבסיסי של select */
+  outline: none; /* מסיר את הקווים המקיפים בעת הפוקוס */
+}
+
+.select-services::-ms-expand {
+  display: none; /* מסיר את החץ ב-IE */
+}
+
+.select-services option {
+  background-color: black; /* צבע רקע של רשימת האפשרויות */
+  color: white; /* צבע הטקסט של אפשרויות */
+}
+
+.inside-addButton{
+  width: 400px;
+  height: 50px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 8px solid rgb(249, 251, 250);
+  color: white;
+  font-size: 20px;
+  padding: 10px;
+  outline: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-bottom 0.3s ease;
+}
+
+.addRoomButton:hover {
+  background-color: rgba(31, 255, 221, 0.1);
+}
+
+
+.link-inside {
+  color: white; /* צבע הטקסט */
+  font-size: 20px; /* גודל הפונט */
+  padding: 10px 20px; /* ריווח פנימי */
+  text-decoration: none; /* מסיר קו תחתון */
+  background-color:transparent; /* צבע הרקע */
+  border-radius: 5px; /* פינות מעוגלות */
+  display: inline-block; /* תצוגה באותה שורה */
+  margin: 5px; /* רווח בין רכיבים */
+  cursor: pointer; /* שינוי הסמן לכשהוא מעל הכפתור */
+  transition: background-color 0.3s ease; /* אנימציה לשינוי צבע הרקע */
+}
+
+.link:hover {
+  background-color: rgba(31, 255, 221, 0.8); /* צבע רקע קל בעת ריחוף */
+}
+
+

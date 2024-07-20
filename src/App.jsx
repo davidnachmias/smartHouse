@@ -9,13 +9,11 @@ import InsideRoom from './views/InsideRoom'
 
 function App() {
   const [house,setHouse] = useState([])
-
   return (
     <houseContext.Provider value={{house,setHouse}}>
     <Routes>
       <Route path='/'element={<HomePage/>}/>
       <Route path='/addRoom'element={<AddRoom/>}/>
-      <Route path='/room'element={<Room/>}/>
       <Route path='/InsideRoom' element={<InsideRoom/>}/>
     </Routes>
     </houseContext.Provider>
