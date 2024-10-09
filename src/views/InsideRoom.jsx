@@ -1,24 +1,25 @@
 import React, { useContext, useState, useEffect } from 'react';
-import { useLocation, Link } from 'react-router-dom';
+import { useLocation, Link,useParams } from 'react-router-dom';
 import Services from '../components/Services';
 import ServicesStyle from '../components/ServicesStyle';
 import { houseContext } from '../context/houseContext';
 import insideVideo from '../assets/insideVideo.mp4';
 
 export default function SmartHouse() {
+  const {inputName} = useParams()
   const { house, setHouse } = useContext(houseContext);
   const location = useLocation();
   const { name , color,type} = location.state || {};
-
   const [showServices, setShowServices] = useState(false);
   const [selectedServices, setSelectedServices] = useState([]);
 
   useEffect(() => {
-    const selectedRoom = house.find((room) => room.roomName === name);
+    const selectedRoom = house.find((room) => room.roomName === inputName);
     if (selectedRoom && selectedRoom.selectedServices) {
       setSelectedServices(selectedRoom.selectedServices);
     }
-  }, [house, name]);
+    
+  }, [house, inputName]);
 
   function handleClick() {
     setShowServices(true);
@@ -30,7 +31,7 @@ export default function SmartHouse() {
       <div className='insideRoomContainer'>
         <div>
           <h1 style={{fontSize:"50px"}}>Smart House</h1>
-          <h3 style={{fontSize:"30px"}}>Room Name: {name}</h3>
+          <h3 style={{fontSize:"30px"}}>Room Name: {inputName}</h3>
           <h3 style={{fontSize:"30px"}}>Room Type: {type}</h3>
           <button className='inside-addButton' onClick={handleClick}>Add Services</button>
         </div>

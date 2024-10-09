@@ -14,7 +14,7 @@ function App() {
     <Routes>
       <Route path='/'element={<HomePage/>}/>
       <Route path='/addRoom'element={<AddRoom/>}/>
-      <Route path='/InsideRoom' element={<InsideRoom/>}/>
+      <Route path='/InsideRoom/:inputName' element={<InsideRoom/>}/>
     </Routes>
     </houseContext.Provider>
   )
