@@ -5,7 +5,7 @@ export default function Room({ name, color, selectedServices, type }) {
   const navigate = useNavigate(); 
 
   function handleClick() {
-    navigate("/InsideRoom", { state: { name, color, selectedServices, type } });
+    navigate(`/InsideRoom/${name}`,{ state: { name, color, selectedServices, type } });
   }
 
   return (

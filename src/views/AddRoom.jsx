@@ -41,7 +41,7 @@ export default function () {
   return (
     <div className='addRoomMain'>
         <div style={{height:"600px",width:"700px",display:'flex', flexDirection:"column",justifyContent:"space-around",alignItems:"center",border: '10px solid white',borderRadius:"10px"}}>
-             <h1 style={{color:"white",fontSize:"80px"}}>Smart house</h1>
+             <h1 style={{color:"white",fontSize:"80px"}}>Smart house 2</h1>
              <select className='addRoomSelect' onChange={(e)=>{setSelectedRoom(e.target.value)}}>
                 <option value="">choose room</option>
                 <option value="kitchen">kitchen</option>
